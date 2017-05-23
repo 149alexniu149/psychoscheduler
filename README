@@ -1,0 +1,13 @@
+Overview:
+---------
+This program schedules psychopy jobs to run. At present, it only supports a very specific job for a testing vision in fish. Eventually(tm), it will be able to handle dynamically loaded job types with custom parameters.
+
+scheduler.py
+------------
+scheduler.py is the python script that makes the magic happen. It reads in a YAML job description file and loads each job into a priority queue. Once this is done, the script processes each job in ascending order of priority. A job, for the purposes of the scheduler, is defined as a discrete unit of processing required by the experimenter. Eventually(tm) job will be an abstract class extended by different job types, assuming my understanding of python is not too colored by my understanding if Java.
+
+usage: python schedule.yaml
+
+schedule:
+---------
+A schedule is a collection of jobs defined in YAML format to be run by the scheduler. A detailed description and example of a schedule can be seen in sampleschedule.yaml

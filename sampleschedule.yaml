@@ -1,0 +1,26 @@
+#This example file provides a quick outline of what the scheduler expects as an input file
+#The scheudler will take in a YAML file containing  maps representing the jobs
+#that you wish to schedule
+
+Job1:
+  #priority represents the ordering of the job. Jobs wil lower priorities will run first
+  Priority: 1
+  #Time represents the time in seconds that the job will run for
+  Time: 80
+  #The description provides a brief description of the job
+  Description: First job to run
+  #Gradient defines the gradient value you want th ejob to run with
+  Gradient: 10
+  #velocity represents the speed and direction you would like the display to move
+  #negative values will move the display to the right
+  Velocity: 10
+  #Width describes the width of the bars
+  Width: 5
+#Jobs are delimited by indentation
+Job2:
+  Priority: 2
+  Time: 80
+  Description: second job to run
+  Gradient: 1
+  Velocity: 100
+  Width: 54
